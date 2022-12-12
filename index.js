@@ -15,15 +15,11 @@ app.use(bodyParser.json());
 
 
 
-// const corsOptions = {
-//     origin: (origin, callback) => {
-//       if (allowedOrigins.includes(origin) || !origin) {
-//         callback(null, true);
-//       } else {
-//         callback(new Error('Origin not allowed by CORS'));
-//       }
-//     },
-//   };
+app.use(function (request, response, next) {
+  response.header("Access-Control-Allow-Origin", "*");
+  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 
 
