@@ -14,12 +14,14 @@ var app = express()
 app.use(bodyParser.json());
 
 
+app.use(cors({ origin: ["https://ayat-constructionv11.herokuapp.com","https://www.aayat-construction.in"], 
 
-app.use(function (request, response, next) {
-  response.header("Access-Control-Allow-Origin", "*");
-  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+methods:["GET","POST","DELETE","PUT"],
+origin:true,
+credentials: true }))
+
+
+
 
 
 
