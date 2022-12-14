@@ -14,15 +14,15 @@ var app = express()
 app.use(bodyParser.json());
 
 
-app.use(cors({ origin: ["https://ayat-constructionv11.herokuapp.com","https://www.aayat-construction.in"], 
+// app.use(cors({ origin: ["https://ayat-constructionv11.herokuapp.com","https://www.aayat-construction.in"], 
 
-methods:["GET","POST","DELETE","PUT"],
-origin:true,
-credentials: true }))
-
-
+// methods:["GET","POST","DELETE","PUT"],
+// origin:true,
+// credentials: true }))
 
 
+
+app.use(cors());
 
 
 app.use(express.urlencoded({ extended: false })); 
